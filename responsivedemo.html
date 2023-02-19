@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Demo</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        div {
+            text-align: center;
+            font-size: 20px;
+        }
+        @media screen and (min-width: 1440px) {
+            body {
+                background-color: aquamarine;
+            }
+        }
+        @media screen and (max-width: 1440px) and (min-width: 1024px) {
+            body {
+                background-color: green;
+            }
+            .responsive-content::after {
+                content: "Screen size: 1440px";
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            body {
+                background-color: #b1882f;
+            }
+            .responsive-content::after {
+                content: "Screen size: 1024px";
+            }
+        }
+        @media screen and (min-width: 425px) and (max-width: 768px) {
+            body {
+                background-color: skyblue;
+            }
+            .responsive-content::after {
+                content: "Screen size: 768px";
+            }
+        }
+        @media screen and (max-width:425px) {
+            body {
+                background-color: red;
+            }
+            .responsive-content::after {
+                content: "Screen size: 425px";
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>This is a Media Query demo page.</h1>
+    <div class="responsive-content"></div>
+</body>
+</html>
